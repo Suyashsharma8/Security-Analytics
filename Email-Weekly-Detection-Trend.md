@@ -1,10 +1,10 @@
-This query displays the weekly detection trends captured by MDO and EOP for Phish, Malware, and Spam.
+This query displays the weekly email detection trends captured by Microsoft defender for Office for Phish, Malware, and Spam using KQL for sentinel.
 ```KQL
 EmailEvents
-| where Timestamp > ago(7d)
+| where TimeGenerated > ago(7d)
 | where isnotempty(ThreatTypes)
 | extend StringtoDynamic = split(ThreatTypes, ", ")
 | mv-expand StringtoDynamic
 | extend EmailThreat = tostring(StringtoDynamic)
-| summarize Case = count() by EmailThreat, bin(Timestamp, 1d)
-| render linechart 
+| summarize Case = count() by EmailThreat, bin(TimeGenerated, 1d)
+| render piechart 
