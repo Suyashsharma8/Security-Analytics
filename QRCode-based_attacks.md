@@ -1,3 +1,5 @@
+The below queries can be used to check the statistics of emails with QR Code received in the organisation-
+
 Volume of inbound emails with QR code in last 30 days:
 
 ```kql
