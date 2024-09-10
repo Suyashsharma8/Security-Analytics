@@ -9,3 +9,4 @@ EmailEvents
 | where DeliveryAction =="Blocked"
 | summarize dcount(NetworkMessageId) by bin(TimeGenerated, 1d)
 | render timechart
+'''
