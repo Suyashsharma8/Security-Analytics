@@ -1,4 +1,4 @@
-This workbook is used to visualize the different threat types we get from the MDTI connector to Sentinel.
+This workbook is used to visualize the different threat types received from the MDTI connector to Sentinel.
 
 ```kql
 ThreatIntelligenceIndicator
