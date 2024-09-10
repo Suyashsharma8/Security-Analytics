@@ -1,5 +1,6 @@
 
 Emails with QR Code Blocked in last 30 days
+
 '''kql
 EmailEvents
 | where TimeGenerated > ago(30d)
