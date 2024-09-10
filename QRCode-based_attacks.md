@@ -1,7 +1,7 @@
 
 Emails with QR Code Blocked in last 30 days
 
-'''kql
+```kql
 EmailEvents
 | where TimeGenerated > ago(30d)
 | where EmailDirection == "Inbound"
@@ -10,4 +10,4 @@ EmailEvents
 | where DeliveryAction =="Blocked"
 | summarize dcount(NetworkMessageId) by bin(TimeGenerated, 1d)
 | render timechart
-'''
+```
