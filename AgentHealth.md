@@ -1,4 +1,4 @@
-This query can be used to check for a healthy Defender for Endpoint environment
+This query can be used to check for a healthy Defender for Endpoint environment. This query will provide a report of the best practice configurations for Defender ATP deployment. Tests which are reporting "BAD" as a result imply that the associated capability is not configured per best practice recommendation.
 
 ```kql
 DeviceTvmSecureConfigurationAssessment
